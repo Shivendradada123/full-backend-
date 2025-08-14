@@ -1,8 +1,10 @@
-console.log("mene aaj hi course liya hai aur aaj se backend start kar raha hu suru se ");
+
+  const la =   prompt('top') 
+    if (la === 'kismat') {
+      console.log('kismat')
+    } else {
+      console.log('kismat chdi hai')
+    }
+  
 
 
-if(user === maoderpakdu){
-    console.log("user is pakdu");
-}else{
-   alert('block this user')
-}
