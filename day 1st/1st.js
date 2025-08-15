@@ -1,7 +1,7 @@
 
   const la =   prompt('top') 
     if (la === 'kismat') {
-      console.log('kismat')
+      alert('kismat chdi hai')
     } else {
       console.log('kismat chdi hai')
     }
