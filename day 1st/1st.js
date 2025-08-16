@@ -3,7 +3,7 @@
     if (la === 'kismat') {
       alert('kismat chdi hai')
     } else {
-      console.log('kismat chdi hai')
+      console.log('kismat ')
     }
   
 
