@@ -11,14 +11,7 @@ conole.log(fs)
 
 
 
-console('shivendra mauhariya')
-
-
-
-
-
-
-
+console('shivendra ki kismat l hai')
 
 
 

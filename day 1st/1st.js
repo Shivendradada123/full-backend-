@@ -6,8 +6,7 @@
       console.log('kismat ')
     }
   
-
-
+cons
 
 
 
