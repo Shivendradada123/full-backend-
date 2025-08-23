@@ -1,0 +1,23 @@
+{
+  "name": "mern-stack",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Shivendradada123/full-backend-#readme",
+  "bugs": {
+    "url": "https://github.com/Shivendradada123/full-backend-/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shivendradada123/full-backend-.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@types/node": "^24.3.0"
+  }
+}
