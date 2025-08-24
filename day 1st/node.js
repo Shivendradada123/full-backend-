@@ -11,9 +11,9 @@ conole.log(fs)
 
 
 
-console('shivendra ki kismat l hai par aacha bana dunga sabki mkc 4 baar')
+console('shivendra ki kismat l hai par aacha bana dunga sabki mkc 36 baar')
 
 
 
 
- 
+ con
