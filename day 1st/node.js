@@ -11,9 +11,9 @@ conole.log(fs)
 
 
 
-console('shivendra ki kismat l hai par aacha bana dunga sabki mkc 36 baar')
+console('become a fullstack devloper soon')
 
 
 
 
- con
+ 
