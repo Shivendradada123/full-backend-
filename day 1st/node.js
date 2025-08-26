@@ -11,7 +11,7 @@ conole.log(fs)
 
 
 
-console('become a fullstack devloper soon')
+console('become a fullstack web devloper soon')
 
 
 
