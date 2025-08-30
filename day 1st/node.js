@@ -11,9 +11,11 @@ conole.log(fs)
 
 
 
-console('become a fullstack web devloper soon wait some time ')
+console('become a fullstack web devloper soon wait some time but hard work  ')
+
+
+console.log("Shivendra mauhariya")
 
 
 
 
-con
