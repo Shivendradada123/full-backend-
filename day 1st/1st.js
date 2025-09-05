@@ -1,33 +1,18 @@
-const express = require("express");
-const axios = require("axios");
-const app = express();
+const fs =  require('node:fs');
 
-const ACCESS_TOKEN = "yaha_apna_access_token_dalo";
+console.log('aditya nigga');
 
-app.get("/profile", async (req, res) => {
-  try {
-    const url = `https://graph.instagram.com/me?fields=id,username,account_type,media_count&access_token=${ACCESS_TOKEN}`;
-    const response = await axios.get(url);
-    res.json(response.data);
-  } catch (error) {
-    res.json({ error: error.message });
-  }
+
+
+// const content = fs.readFileSync('user.txt', 'utf-8');
+
+// console.log('Content', contents);
+
+fs.readFile('user.txt', 'utf-8', function (error, data) {
+  if (error) console.log(error);
+  else console.log('hey', data)
 });
 
-app.get("/media", async (req, res) => {
-  try {
-    const url = `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink&access_token=${ACCESS_TOKEN}`;
-    const response = await axios.get(url);
-    res.json(response.data);
-  } catch (error) {
-    res.json({ error: error.message });
-  }
-});
-
-app.listen(3000, () => {
-  console.log("Server running on http://localhost:3000");
-});
-
-
+console.log('aditya nigga nhi hai');
 
 

@@ -1,9 +1,9 @@
- const fs = require('fs')
- const sync = fs.readFileSync('user.txt','utf-8')
+//  const fs = require('fs')
+//  const sync = fs.readFileSync('user.txt','utf-8')
 
-console.log(sync)
+// console.log(sync)
 
-conole.log(fs)
+// conole.log(fs)
    
 
 
@@ -11,10 +11,10 @@ conole.log(fs)
 
 
 
-console('become a fullstack web devloper soon wait some time but hard work  ')
+// console('become a fullstack web devloper soon wait some time but hard work  ')
 
 
-console.log("Shivendra mauhariya")
+// console.log("Shivendra mauhariya")
 
 
 
