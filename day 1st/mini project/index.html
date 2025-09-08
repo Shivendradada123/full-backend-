@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Real-Time Chat App</title>
+ <style>
+  body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.chat-container {
+  background: white;
+  width: 400px;
+  max-width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+#messages {
+  list-style-type: none;
+  padding: 10px;
+  overflow-y: scroll;
+  flex-grow: 1;
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+}
+
+#messages li {
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  background: #e1ffc7;
+  border-radius: 4px;
+  width: fit-content;
+  max-width: 80%;
+}
+
+form {
+  display: flex;
+  padding: 10px;
+}
+
+input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+button {
+  background: #4CAF50;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+ </style>
+</head>
+<body>
+  <div class="chat-container">
+    <ul id="messages"></ul>
+    <form id="form" action="">
+      <input id="input" autocomplete="off" placeholder="Type a message..." />
+      <button>Send</button>
+    </form>
+  </div>
+  <script >
+    const socket = io();
+
+const form = document.getElementById("form");
+const input = document.getElementById("input");
+const messages = document.getElementById("messages");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  if (input.value.trim()) {
+    socket.emit("chat message", input.value);
+    input.value = "";
+  }
+});
+
+socket.on("chat message", function (msg) {
+  const li = document.createElement("li");
+  li.textContent = msg;
+  messages.appendChild(li);
+  messages.scrollTop = messages.scrollHeight;
+});
+
+  </script>
+  <script >
+    
+const express = require("express");
+const http = require("http");
+const socketIo = require("socket.io");
+
+const app = express();
+const server = http.createServer(app);
+const io = socketIo(server);
+
+app.use(express.static("public"));
+
+io.on("connection", (socket) => {
+  console.log("New user connected");
+
+  socket.on("chat message", (msg) => {
+    io.emit("chat message", msg);
+  });
+
+  socket.on("disconnect", () => {
+    console.log("User disconnected");
+  });
+});
+
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+  </script>
+  <script src="/socket.io/socket.io.js"></script>
+</body>
+</html>
+
+
