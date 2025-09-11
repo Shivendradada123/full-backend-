@@ -1,16 +1,15 @@
 
-const EventEmitter = require('events');
+// const EventEmitter = require('events');
 
 
-const eventEmitter = new EventEmitter();
+// const eventEmitter = new EventEmitter();
 
 
-eventEmitter.on("nigga", (user) => {
-    console.log(`Hello ${user} nigga`);
-});
+// eventEmitter.on("nigga", (user) => {
+//     console.log(`Hello ${user} nigga`);
+// });
 
 
-eventEmitter.emit("nigga", "kalua");.
+// eventEmitter.emit("nigga", "kalua");.
 
 
-con
