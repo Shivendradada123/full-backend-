@@ -1,7 +1,7 @@
 const http = require('http')
 
 const server = http.createServer(function (req, res) {
-    console.log('Ha reques a rahi hai ')
+    console.log('Ha reques a rahi hai bhejo  ')
     res.writeHead(200)
     res.end('yes shivendra chal gya server aja')
 });
