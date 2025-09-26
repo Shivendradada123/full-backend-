@@ -2,6 +2,7 @@ const http = require("node:http");
 
 // Create the server
 const server = http.createServer(function (req, res) {
+  console.log(req, res);
   // Check which URL the user is requesting
   if (req.url === "/contact") {
     res.writeHead(200, { "Content-Type": "text/plain" });
@@ -11,7 +12,7 @@ const server = http.createServer(function (req, res) {
     return res.end("Hello Mauhariya!");
   } else {
     res.writeHead(404, { "Content-Type": "text/plain" });
-    return res.end("Error 404: Page Not Found");
+    return res.end("yayaaya");
   }
 });
 
@@ -21,4 +22,3 @@ server.listen(8000, () => {
 });
 
 
-c
