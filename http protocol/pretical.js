@@ -7,7 +7,7 @@ const server = http.createServer(function(req, res){
 
 switch(path) {
     case '/':
-        res.writeHead(200).end('hello shivendra😎😎')
+        res.writeHead(200).end('hello shivend')
 }
 
 
