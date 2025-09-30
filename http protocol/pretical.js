@@ -1,17 +1,32 @@
-const http = require('node:http')
+const http = require("node:http");
 
-const server = http.createServer(function(req, res){
-    const method = req.method;
-    const path = req.url;
+const server = http.createServer(function (req, res) {
+  const method = req.method;
+  const path = req.url;
 
-
-switch(path) {
-    case '/':
-        res.writeHead(200).end('hello shivendra ji')
-}
-
-
-
+  if (method === "GET") {
+    if (path === "/") {
+      res.writeHead(200, { "Content-Type": "text/plain" });
+      return res.end("hello shivendra ji");
+    } else {
+      res.writeHead(404, { "Content-Type": "text/plain" });
+      return res.end("404 Not Found");
+    }
+  } else if (method === "POST") {
+    if (path === "/") {
+      res.writeHead(200, { "Content-Type": "text/plain" });
+      return res.end("POST request received at /");
+    } else {
+      res.writeHead(404, { "Content-Type": "text/plain" });
+      return res.end("404 Not Found for POST");
+    }
+  } else {
+    // Method not allowed
+    res.writeHead(405, { "Content-Type": "text/plain" });
+    return res.end(`Method ${method} not allowed`);
+  }
 });
 
-server.listen(8000, () => console.log(`Http server is running on PORT 8000`))
+server.listen(8000, () =>
+  console.log(`HTTP server is running on PORT 8000`)
+);
